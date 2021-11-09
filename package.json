@@ -1,0 +1,22 @@
+{
+  "name": "sean.js",
+  "version": "1.0.0",
+  "description": "Simple NPM Package",
+  "main": "sean.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fb-sean/sean.js.git"
+  },
+  "keywords": [
+    "discord.js", "JavaScript", "dsc.js", "d.js"
+  ],
+  "author": "fb_sean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fb-sean/sean.js/issues"
+  },
+  "homepage": "https://github.com/fb-sean/sean.js#readme"
+}
