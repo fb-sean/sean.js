@@ -1,3 +1,6 @@
+const Database = new Map;
+
+
 class main {
 
     // send booooooo
@@ -47,5 +50,50 @@ class main {
         return lastarray.indexOf(i) < 0
     });
 	}
+
+
+    // cache Database start
+    static getEntry(key) {
+        // return if they send us no key
+        if(!key) return new Error("sean.js | You need a valid key for this.");
+
+        // get the database entry
+        const entry = Database.get(key);
+        
+        // return if there is no entry
+        if(!entry) return null;
+        
+        // send the database entry
+        return entry;
+    }
+
+    // set a database entry
+    static setEntry(key, object) {
+        // return if they send us no key
+        if(!key) return new Error("sean.js | You need a valid key for this.");
+        
+        // return if they dont give us a object
+        if(!object) return new Error("sean.js | You didnt provide a database entry");
+
+        // set the database object
+        const entry = Database.set(key, object);
+
+        // return if we can't set the Database entry
+        if(!entry) return new Error("sean.js | Can't set this as entry");
+
+        // return the object after no problems
+        return object;
+    }
+
+    // delete database entry
+    static deleteEntry(key) {
+        // return if they send us no key
+        if(!key) return new Error("sean.js | You need a valid key for this.");
+
+        // set the database entry to null
+        const deletedEntry = Database.set(key, null);
+
+        return true;
+    }
 }
 module.exports = main;
